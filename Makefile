@@ -14,7 +14,7 @@ PROGRAM=pandemic
 
 include $(PROJECTSDIR)/common/Makefile.std
 
-LDFLAGS+=-lm
+LDLIBS+=-lm
 
 CSRC=$(notdir $(subst .c,,$(wildcard $(SRCDIR)/*.c)))
 OBJS=$(foreach f,$(CSRC),$(OBJDIR)/$(f).o)
@@ -30,7 +30,7 @@ vars:
 		@make std_vars
 
 $(BINDIR)/$(PROGRAM):	$(OBJS) $(BINDIR)/.must_exist
-		$(CC) $(LDFLAGS) $(OBJS) -o $@
+		$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
 
 $(RESDIR)/%.data:	tests/%.args $(RESDIR) $(BINS)
 		@sed -e 's/^/	/' $<
