@@ -1,0 +1,14 @@
+Seed=1
+Iterations=3
+Tests=1
+Show=Events,World
+Population=20
+Area=50
+Infected=1
+RDeath=0.1
+TDeath=10
+BContagious=1 EContagious=12
+BSymptomatic=4 ESymptomatic=15
+EResistant=30
+RQuarantine=0.0
+Max_Dist=3

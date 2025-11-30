@@ -1,0 +1,13 @@
+Seed=1
+Tests=10
+Iterations=10
+Show=
+Population=1000
+Area=5000
+Infected=1
+RDeath=0.5
+TDeath=10
+EContagious=12
+EResistant=500
+Max_Dist=3
+Output_File=test.data

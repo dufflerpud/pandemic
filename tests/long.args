@@ -1,0 +1,10 @@
+Iterations=10
+Show=Cycles
+Population=2000
+Area=5000
+Infected=1
+Rdeath=0.5
+Tdeath=10
+EContagious=12
+EResistant=500
+Max_Dist=5

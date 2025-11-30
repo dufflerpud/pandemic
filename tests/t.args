@@ -1,0 +1,1 @@
+run Seed=0 Iterations=1 Tests=2 Max_Dist=3.00,10.0 Infected=1 BContagious=2 EContagious=5 BSymptomatic=4 ESymptomatic=5 TDeath=10 RDeath=0.50 TQuarantine=3 RQuarantine=0.80 EResistant=500 Population=600,1200 Area=2500 output_file=/tmp/pandemic.data
