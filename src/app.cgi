@@ -132,15 +132,6 @@ EOF
 	    ( ($butdest eq $mode) ? " style='background-color:#50a0c0'" : "" ),
 	    " value=\"$buttext\"\n" );
 	}
-    foreach my $button ( "admin:$cpi_vars::USER XL(account)" )
-        {
-	my( $butdest, $buttext ) = split(/:/,$button);
-	$buttext = ucfirst( $buttext );
-	push( @toprint, "><input type=button onClick='footerfunc(\"$butdest\");'",
-	    " help='menu_$butdest'",
-	    ( ($butdest eq $mode) ? " style='background-color:#50a0c0'" : "" ),
-	    " value=\"$buttext\"\n" );
-	}
     push( @toprint, ">",
 	&logout_select(
 	    ($mode eq "admin" ? "form" : "footerform"),
@@ -166,7 +157,7 @@ sub print_form
 	&read_file( $DISEASESJS ),
 	&read_file( $JS ),
 	<<EOF );
-	</head><body onLoad='setup_javascript();'>
+	</head><body $cpi_vars::BODY_TAGS onLoad='setup_javascript();'>
 	$cpi_vars::HELP_IFRAME
 	<form name=form target=_new method=post>
 	<center><table cellpadding=0 cellspacing=0>
