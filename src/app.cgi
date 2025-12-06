@@ -16,7 +16,7 @@ use lib "/usr/local/lib/perl";
 use cpi_file qw( fatal read_file cleanup );
 use cpi_cgi qw( CGIreceive CGIheader );
 use cpi_translate qw( xprint );
-use cpi_user qw( admin_page logout_select );
+use cpi_user qw( logout_select );
 use cpi_mime qw( mime_string );
 use cpi_setup qw( setup );
 use cpi_english qw( plural );
@@ -331,9 +331,7 @@ if( $ENV{SCRIPT_NAME} )
     {
     &CGIreceive();
     &get_variables();
-    if( $cpi_vars::FORM{func} && $cpi_vars::FORM{func} eq "admin" )
-	{ &admin_page(); }
-    elsif( $cpi_vars::FORM{submit} )
+    if( $cpi_vars::FORM{submit} )
 	{
         &run_test();
 	}
