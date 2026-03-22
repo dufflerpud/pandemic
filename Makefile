@@ -47,7 +47,7 @@ vars:
 		@echo "	TEST_DATA		$(TEST_DATA)"
 		@echo " CSRC			$(CSRC)"
 		@echo " OBJS			$(OBJS)"
-		@make std_vars
+		@$(MAKE) std_vars
 
 $(BINDIR)/$(PROGRAM):	$(OBJS) $(BINDIR)/.must_exist
 		$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $@
@@ -79,4 +79,5 @@ test:		$(TEST_DATA)
 		gdb $(BINDIR)/$(PROJECT)
 %:
 		@echo "Invoking std_$@ rule:"
-		@$(MAKE) std_$@ ORIGINAL_TARGET=$@
+		@$(MAKE) ORIGINAL_TARGET=$@ st
+d_$@
