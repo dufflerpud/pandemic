@@ -79,5 +79,4 @@ test:		$(TEST_DATA)
 		gdb $(BINDIR)/$(PROJECT)
 %:
 		@echo "Invoking std_$@ rule:"
-		@$(MAKE) ORIGINAL_TARGET=$@ st
-d_$@
+		@$(MAKE) ORIGINAL_TARGET=$@ std_$@
