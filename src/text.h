@@ -1,1 +1,1 @@
-/usr/local/projects/cci/src/text.h
+cci/text.h

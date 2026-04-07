@@ -1,1 +1,1 @@
-/usr/local/projects/cci/src/debug.h
+cci/debug.h

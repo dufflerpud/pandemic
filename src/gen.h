@@ -1,1 +1,1 @@
-/usr/local/projects/cci/src/gen.h
+cci/gen.h
