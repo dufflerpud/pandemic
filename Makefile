@@ -69,7 +69,7 @@ $(RESDIR)/%.screen:	$(RESDIR)/%.data
 		pandaplot -i $< -o $@
 
 test:		$(TEST_DATA)
-		@: Do nothing
+		@$(MAKE) std_test
 
 %.gdb:		tests/%.args $(BINS)
 		echo "run " `cat $<` > /tmp/setclip
